@@ -12,11 +12,6 @@ const App = () => {
     <div className="w-screen overflow-x-hidden">
       <Navbar />
       <Hero />
-      const App = () => {
-  return (
-    <div className="w-screen overflow-x-hidden">
-      <Navbar />
-      <Hero />
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <About />
         <Projects />
@@ -26,8 +21,6 @@ const App = () => {
         <Footer />
       </div>
     </div>
-  );
-};
   );
 };
 
