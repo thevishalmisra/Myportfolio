@@ -40,23 +40,23 @@ const About = () => {
   />
 
   {/* Optional dark overlay */}
-  <div className="absolute inset-0 bg-black/75 z-0" />
+  <div className="absolute inset-0 bg-black/80 z-0" />
 
   {/* Text content layer */}
-  <div className="relative z-15 w-full md:w-[70%] px-4 py-6 text-white">
-    <p className="headtext mb-4">Education:-</p>
+  <div className="relative z-15 w-full px-4 py-6 text-white">
+    <p className="headtext mb-6">Education:-</p>
 
-    <ul className="flex flex-col gap-6 text-base">
-      <li className="space-y-1">
-        <p className="font-semibold text-white text-lg">🎓 B.Tech in Computer Science</p>
-        <p className="text-white/90">Dr. A.P.J. Abdul Kalam Technical University (AKTU)</p>
+    <ul className="flex flex-col gap-8 text-base">
+      <li className="space-y-2">
+        <p className="font-bold text-white text-xl">🎓 B.Tech in Computer Science</p>
+        <p className="text-white/90 text-lg leading-tight">Dr. A.P.J. Abdul Kalam Technical University (AKTU)</p>
         <p className="italic text-white/80">2022 – 2026</p>
       </li>
 
-      <li className="space-y-1">
-        <p className="font-semibold text-white text-lg">🏫 Higher Secondary - CBSE</p>
+      <li className="space-y-2 mt-2">
+        <p className="font-bold text-white text-xl">🏫 Higher Secondary - CBSE</p>
         <p className="text-white/90">PCM, 2021</p>
-        <p className="text-white/90 break-normal">Holly Kids International School</p>
+        <p className="text-white/90 text-lg leading-tight">Holly Kids International School</p>
       </li>
     </ul>
   </div>
