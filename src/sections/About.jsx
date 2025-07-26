@@ -39,7 +39,7 @@ const About = () => {
   />
 
   {/* Strong Dark Overlay */}
-  <div className="absolute inset-0 bg-black/80 z-10" />
+  <div className="absolute inset-0 bg-black/85 z-10" />
 
 
   <div
@@ -55,15 +55,15 @@ const About = () => {
     {/* College */}
     <div className="mb-2">
       <p className="font-semibold flex items-center gap-2"
-         style={{ fontSize: 'calc(0.910rem * var(--text-scale))' }} /* Base equivalent to Tailwind's text-base, scaled */>
+         style={{ fontSize: 'calc(0.810rem * var(--text-scale))' }} /* Base equivalent to Tailwind's text-base, scaled */>
         🎓 B.Tech in Computer Science
       </p>
       <p className="text-white/90 leading-snug"
-         style={{ fontSize: 'calc(0.655rem * var(--text-scale))' }} /* Base equivalent to Tailwind's text-sm, scaled */>
-        Dr. A.P.J. Abdul Kalam Technical University (AKTU)
+         style={{ fontSize: 'calc(0.720rem * var(--text-scale))' }} /* Base equivalent to Tailwind's text-sm, scaled */>
+        Dr. A.P.J. Abdul Kalam Technical University, (AKTU)
       </p>
       <p className="text-white/90"
-         style={{ fontSize: 'calc(0.75rem * var(--text-scale))' }} /* Base equivalent to Tailwind's text-xs, scaled */>
+         style={{ fontSize: 'calc(0.67rem * var(--text-scale))' }} /* Base equivalent to Tailwind's text-xs, scaled */>
          2022 – 2026
       </p>
     </div>
@@ -71,15 +71,15 @@ const About = () => {
     {/* School */}
     <div className="mt-3">
       <p className="font-semibold flex items-center gap-2"
-         style={{ fontSize: 'calc(0.910rem * var(--text-scale))' }} /* Base equivalent to Tailwind's text-base, scaled */>
+         style={{ fontSize: 'calc(0.810rem * var(--text-scale))' }} /* Base equivalent to Tailwind's text-base, scaled */>
         🏫 Higher Secondary - PCM
       </p>
       <p className="text-white/90 leading-snug"
-         style={{ fontSize: 'calc(0.655rem * var(--text-scale))' }} /* Base equivalent to Tailwind's text-sm, scaled */>
+         style={{ fontSize: 'calc(0.720rem * var(--text-scale))' }} /* Base equivalent to Tailwind's text-sm, scaled */>
         Holly Kids International School
       </p>
       <p className="text-white/90"
-         style={{ fontSize: 'calc(0.75rem * var(--text-scale))' }} /* Base equivalent to Tailwind's text-xs, scaled */>
+         style={{ fontSize: 'calc(0.67rem * var(--text-scale))' }} /* Base equivalent to Tailwind's text-xs, scaled */>
          CBSE, 2021
       </p>
     </div>
