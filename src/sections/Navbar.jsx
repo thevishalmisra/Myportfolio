@@ -2,20 +2,20 @@ import { useState } from "react";
 import { motion } from "motion/react";
 const resumeLink = "https://drive.google.com/file/d/1wKHzyriKKz7xD_QqKjRb0jOSagA1JHkP/view?usp=drive_link";
 
-function Navigation() {
+function Navigation({ onLinkClick }) {
   return (
     <ul className="nav-ul flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">
       <li className="nav-li">
-        <a className="nav-link text-neutral-400 hover:text-white transition-colors text-lg sm:text-base" href="#home">Home</a>
+        <a className="nav-link text-neutral-400 hover:text-white transition-colors text-lg sm:text-base" href="#home" onClick={onLinkClick}>Home</a>
       </li>
       <li className="nav-li">
-        <a className="nav-link text-neutral-400 hover:text-white transition-colors text-lg sm:text-base" href="#about">About</a>
+        <a className="nav-link text-neutral-400 hover:text-white transition-colors text-lg sm:text-base" href="#about" onClick={onLinkClick}>About</a>
       </li>
       <li className="nav-li">
-        <a className="nav-link text-neutral-400 hover:text-white transition-colors text-lg sm:text-base" href="#work">Work</a>
+        <a className="nav-link text-neutral-400 hover:text-white transition-colors text-lg sm:text-base" href="#work" onClick={onLinkClick}>Work</a>
       </li>
       <li className="nav-li">
-        <a className="nav-link text-neutral-400 hover:text-white transition-colors text-lg sm:text-base" href="#contact">Contact</a>
+        <a className="nav-link text-neutral-400 hover:text-white transition-colors text-lg sm:text-base" href="#contact" onClick={onLinkClick}>Contact</a>
       </li>
     </ul>
   );
@@ -52,24 +52,26 @@ const Navbar = () => {
 
           {/* Desktop navigation */}
           <nav className="hidden sm:flex">
-            <Navigation />
+            <Navigation onLinkClick={() => {}} />
           </nav>
         </div>
       </div>
 
       {/* Mobile navigation */}
-      {isOpen && (
-        <motion.div
-          className="block sm:hidden text-center bg-primary/95 backdrop-blur-lg"
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
-        >
-          <nav className="py-6">
-            <Navigation />
-          </nav>
-        </motion.div>
-      )}
+      <motion.div
+        className={`block sm:hidden text-center bg-primary/95 backdrop-blur-lg ${!isOpen ? 'pointer-events-none' : ''}`}
+        initial={false}
+        animate={{
+          opacity: isOpen ? 1 : 0,
+          y: isOpen ? 0 : -10
+        }}
+        transition={{ duration: 0.2, ease: "easeInOut" }}
+        style={{ display: isOpen ? 'block' : 'none' }}
+      >
+        <nav className="py-6">
+          <Navigation onLinkClick={() => setIsOpen(false)} />
+        </nav>
+      </motion.div>
     </div>
   );
 };
