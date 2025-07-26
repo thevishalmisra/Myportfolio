@@ -4,18 +4,18 @@ const resumeLink = "https://drive.google.com/file/d/1wKHzyriKKz7xD_QqKjRb0jOSagA
 
 function Navigation() {
   return (
-    <ul className="nav-ul flex flex-col sm:flex-row sm:items-center gap-4">
+    <ul className="nav-ul flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">
       <li className="nav-li">
-        <a className="nav-link" href="#home">Home</a>
+        <a className="nav-link text-neutral-400 hover:text-white transition-colors text-lg sm:text-base" href="#home">Home</a>
       </li>
       <li className="nav-li">
-        <a className="nav-link" href="#about">About</a>
+        <a className="nav-link text-neutral-400 hover:text-white transition-colors text-lg sm:text-base" href="#about">About</a>
       </li>
       <li className="nav-li">
-        <a className="nav-link" href="#work">Work</a>
+        <a className="nav-link text-neutral-400 hover:text-white transition-colors text-lg sm:text-base" href="#work">Work</a>
       </li>
       <li className="nav-li">
-        <a className="nav-link" href="#contact">Contact</a>
+        <a className="nav-link text-neutral-400 hover:text-white transition-colors text-lg sm:text-base" href="#contact">Contact</a>
       </li>
     </ul>
   );
@@ -25,9 +25,9 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="fixed inset-x-0 z-20 w-full backdrop-blur-lg bg-primary/40">
-      <div className="mx-auto c-space max-w-7xl">
-        <div className="flex items-center justify-between py-4 px-4 sm:px-0">
+    <div className="fixed inset-x-0 z-50 w-full backdrop-blur-lg bg-primary/40">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between py-4">
           {/* Logo with resume link */}
           <a
             href={resumeLink}
@@ -60,12 +60,12 @@ const Navbar = () => {
       {/* Mobile navigation */}
       {isOpen && (
         <motion.div
-          className="block sm:hidden text-center bg-primary/90"
+          className="block sm:hidden text-center bg-primary/95 backdrop-blur-lg"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.2 }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
         >
-          <nav className="py-4">
+          <nav className="py-6">
             <Navigation />
           </nav>
         </motion.div>
