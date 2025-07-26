@@ -11,7 +11,6 @@ import Loader from "../components/Loader";
 const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 853 });
   return (
-      return (
     <section id="home" className="relative h-screen overflow-hidden">
       <div className="absolute inset-0 bg-black">
         <Canvas camera={{ position: [0, 1, 3] }}>
@@ -25,7 +24,7 @@ const Hero = () => {
             <Rig />
           </Suspense>
         </Canvas>
-      </figure>
+      </div>
     </section>
   );
 };
