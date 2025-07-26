@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 const Card = ({ style, text, image, containerRef }) => {
   return image && !text ? (
     <motion.img

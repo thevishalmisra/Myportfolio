@@ -41,13 +41,7 @@ const About = () => {
   {/* Strong Dark Overlay */}
   <div className="absolute inset-0 bg-black/80 z-10" />
 
-  {/* Foreground Education Text */}
-  {/*
-    Set a custom CSS variable '--text-scale' on this div.
-    Change its value (e.g., '1.1' for 10% larger, '0.9' for 10% smaller)
-    to scale all text proportionally within this section.
-    The default value '1' means 100% of the base size.
-  */}
+
   <div
     className="relative z-20 w-full p-4 text-white sm:w-[60%] md:w-[65%] lg:w-[60%] xl:w-[55%] flex flex-col justify-center"
     style={{ '--text-scale': '1' }} /* Adjust this value to scale fonts */
