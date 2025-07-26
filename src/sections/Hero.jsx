@@ -11,9 +11,9 @@ import Loader from "../components/Loader";
 const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 853 });
   return (
-    <section id="home" className="relative h-screen w-full overflow-hidden">
+    <section id="home" className="relative h-screen w-screen overflow-hidden">
       <ParallaxBackground />
-      <div className="absolute inset-0 w-full z-10">
+      <div className="absolute inset-0 w-screen z-10">
         <Canvas camera={{ position: [0, 1, 3] }}>
           <Suspense fallback={<Loader />}>
             <Float>
