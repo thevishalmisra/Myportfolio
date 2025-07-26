@@ -43,20 +43,20 @@ const About = () => {
   <div className="absolute inset-0 bg-black/75 z-0" />
 
   {/* Text content layer */}
-  <div className="relative z-15 w-full md:w-[70%] px-5 py-6 text-white">
-    <p className="headtext">Education:-</p>
+  <div className="relative z-15 w-full md:w-[70%] px-4 py-6 text-white">
+    <p className="headtext mb-4">Education:-</p>
 
-    <ul className="flex flex-col gap-4 mt-4 text-sm md:text-base">
-      <li>
-        <p className="font-semibold text-white">🎓 B.Tech in Computer Science</p>
-        <p className="text-white/80">Dr. A.P.J. Abdul Kalam Technical University (AKTU)</p>
-        <p className="italic text-white/70">2022 – 2026</p>
+    <ul className="flex flex-col gap-6 text-base">
+      <li className="space-y-1">
+        <p className="font-semibold text-white text-lg">🎓 B.Tech in Computer Science</p>
+        <p className="text-white/90">Dr. A.P.J. Abdul Kalam Technical University (AKTU)</p>
+        <p className="italic text-white/80">2022 – 2026</p>
       </li>
 
-      <li>
-        <p className="font-semibold text-white">🏫 Higher Secondary - CBSE</p>
-        <p className="text-white/80">PCM, 2021</p>
-        <p className="text-white/80 break-words">Holly Kids International School</p>
+      <li className="space-y-1">
+        <p className="font-semibold text-white text-lg">🏫 Higher Secondary - CBSE</p>
+        <p className="text-white/90">PCM, 2021</p>
+        <p className="text-white/90 break-normal">Holly Kids International School</p>
       </li>
     </ul>
   </div>
