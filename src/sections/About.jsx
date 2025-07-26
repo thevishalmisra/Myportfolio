@@ -29,7 +29,7 @@ const About = () => {
         </div>
 
         {/* --- Grid 2 : Education with draggable Cards ------------------------- */}
-  <div className="grid-black-color grid-2 relative overflow-hidden rounded-2xl shadow-2xl border border-white/10">
+ <div className="grid-black-color grid-2 relative overflow-hidden rounded-2xl shadow-2xl border border-white/10">
   {/* Background Image */}
   <div
     className="absolute inset-0 bg-cover bg-center z-0"
@@ -42,30 +42,52 @@ const About = () => {
   <div className="absolute inset-0 bg-black/80 z-10" />
 
   {/* Foreground Education Text */}
-  {/* Adjusted responsive widths to provide more space for text, potentially slightly wider */}
-  <div className="relative z-20 w-full p-6 text-white sm:w-[60%] md:w-[65%] lg:w-[60%] xl:w-[55%]">
-    <p className="headtext mb-5 text-2xl font-bold">Education</p> {/* Slightly reduced margin-bottom */}
+  {/*
+    Set a custom CSS variable '--text-scale' on this div.
+    Change its value (e.g., '1.1' for 10% larger, '0.9' for 10% smaller)
+    to scale all text proportionally within this section.
+    The default value '1' means 100% of the base size.
+  */}
+  <div
+    className="relative z-20 w-full p-4 text-white sm:w-[60%] md:w-[65%] lg:w-[60%] xl:w-[55%] flex flex-col justify-center"
+    style={{ '--text-scale': '1' }} /* Adjust this value to scale fonts */
+  >
+    {/* Heading - font size uses calc() with --text-scale */}
+    <p className="headtext mb-3 font-bold"
+       style={{ fontSize: 'calc(1.20rem * var(--text-scale))' }} /* Base equivalent to Tailwind's text-xl, scaled */>
+       Education
+    </p>
 
     {/* College */}
-    <div className="mb-3"> {/* Reduced margin-bottom to create more vertical space */}
-      <p className="text-base font-semibold flex items-center gap-2"> {/* Slightly reduced degree font size */}
+    <div className="mb-2">
+      <p className="font-semibold flex items-center gap-2"
+         style={{ fontSize: 'calc(0.910rem * var(--text-scale))' }} /* Base equivalent to Tailwind's text-base, scaled */>
         🎓 B.Tech in Computer Science
       </p>
-      <p className="text-sm text-white/90 leading-snug"> {/* Kept text-sm, slightly looser leading for readability */}
+      <p className="text-white/90 leading-snug"
+         style={{ fontSize: 'calc(0.655rem * var(--text-scale))' }} /* Base equivalent to Tailwind's text-sm, scaled */>
         Dr. A.P.J. Abdul Kalam Technical University (AKTU)
       </p>
-      <p className="text-xs ">2022 – 2026</p>
+      <p className="text-white/90"
+         style={{ fontSize: 'calc(0.75rem * var(--text-scale))' }} /* Base equivalent to Tailwind's text-xs, scaled */>
+         2022 – 2026
+      </p>
     </div>
 
     {/* School */}
-    <div>
-      <p className="text-base font-semibold flex items-center gap-2"> {/* Slightly reduced degree font size */}
+    <div className="mt-3">
+      <p className="font-semibold flex items-center gap-2"
+         style={{ fontSize: 'calc(0.910rem * var(--text-scale))' }} /* Base equivalent to Tailwind's text-base, scaled */>
         🏫 Higher Secondary - PCM
       </p>
-      <p className="text-sm text-white/90 leading-snug"> {/* Kept text-sm, slightly looser leading for readability */}
+      <p className="text-white/90 leading-snug"
+         style={{ fontSize: 'calc(0.655rem * var(--text-scale))' }} /* Base equivalent to Tailwind's text-sm, scaled */>
         Holly Kids International School
       </p>
-      <p className="text-xs">CBSE, 2021</p> {/* This line needs to show! */}
+      <p className="text-white/90"
+         style={{ fontSize: 'calc(0.75rem * var(--text-scale))' }} /* Base equivalent to Tailwind's text-xs, scaled */>
+         CBSE, 2021
+      </p>
     </div>
   </div>
 </div>
