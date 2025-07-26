@@ -114,7 +114,7 @@ const About = () => {
           <div className="z-10 w-[50%]">
             <p className="headtext">Tech Stack</p>
             <p className="subtext">
-              I specialize in a variety of languages, frameworks, and tools that allow me to build robust and scalable Web applications.
+              I build powerful, scalable web applications using a broad stack of languages, tools, and frameworks.
             </p>
           </div>
           <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
