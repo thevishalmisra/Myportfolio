@@ -13,13 +13,13 @@ const Hero = () => {
   return (
     <section id="home" className="relative h-screen w-full overflow-hidden">
       <ParallaxBackground />
-      <div className="absolute inset-0 w-full">
+      <div className="absolute inset-0 w-full z-10">
         <Canvas camera={{ position: [0, 1, 3] }}>
           <Suspense fallback={<Loader />}>
             <Float>
               <Astronaut
-                scale={isMobile && 0.23}
-                position={isMobile && [0, -1.5, 0]}
+                scale={isMobile ? 0.23 : 0.3}
+                position={isMobile ? [0.5, -0.5, 0] : [0, 0, 0]}
               />
             </Float>
             <Rig />
