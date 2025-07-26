@@ -12,7 +12,8 @@ const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 853 });
   return (
     <section id="home" className="relative h-screen overflow-hidden">
-      <div className="absolute inset-0 bg-black">
+      <ParallaxBackground />
+      <div className="absolute inset-0">
         <Canvas camera={{ position: [0, 1, 3] }}>
           <Suspense fallback={<Loader />}>
             <Float>
@@ -25,6 +26,7 @@ const Hero = () => {
           </Suspense>
         </Canvas>
       </div>
+      <HeroText />
     </section>
   );
 };
