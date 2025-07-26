@@ -46,17 +46,17 @@ const About = () => {
   <div className="relative z-15 w-full md:w-[70%] px-5 py-6 text-white">
     <p className="headtext">Education:-</p>
 
-    <ul className="flex flex-col gap-3 text-sm">
+    <ul className="flex flex-col gap-4 mt-4 text-sm md:text-base">
       <li>
-        <p>🎓 B.Tech in Computer Science</p>
-        <p>Dr. A.P.J. Abdul Kalam Technical University (AKTU)</p>
-        <p>2022 – 2026</p>
+        <p className="font-semibold text-white">🎓 B.Tech in Computer Science</p>
+        <p className="text-white/80">Dr. A.P.J. Abdul Kalam Technical University (AKTU)</p>
+        <p className="italic text-white/70">2022 – 2026</p>
       </li>
 
       <li>
-        <p>🏫 Higher Secondary - CBSE</p>
-        <p>PCM, 2021</p>
-        <p>Holly Kids International School</p>
+        <p className="font-semibold text-white">🏫 Higher Secondary - CBSE</p>
+        <p className="text-white/80">PCM, 2021</p>
+        <p className="text-white/80 break-words">Holly Kids International School</p>
       </li>
     </ul>
   </div>
